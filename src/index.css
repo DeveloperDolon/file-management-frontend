@@ -116,9 +116,25 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
-    }
+    @apply border-border;
+  }
   body {
-    @apply bg-background text-foreground;
-    }
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .tier-free { color: hsl(var(--tier-free)); }
+  .tier-silver { color: hsl(var(--tier-silver)); }
+  .tier-gold { color: hsl(var(--tier-gold)); }
+  .tier-diamond { color: hsl(var(--tier-diamond)); }
+  .bg-tier-free { background-color: hsl(var(--tier-free) / 0.1); }
+  .bg-tier-silver { background-color: hsl(var(--tier-silver) / 0.1); }
+  .bg-tier-gold { background-color: hsl(var(--tier-gold) / 0.1); }
+  .bg-tier-diamond { background-color: hsl(var(--tier-diamond) / 0.1); }
+  .border-tier-free { border-color: hsl(var(--tier-free) / 0.3); }
+  .border-tier-silver { border-color: hsl(var(--tier-silver) / 0.3); }
+  .border-tier-gold { border-color: hsl(var(--tier-gold) / 0.3); }
+  .border-tier-diamond { border-color: hsl(var(--tier-diamond) / 0.3); }
 }
