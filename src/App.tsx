@@ -15,6 +15,7 @@ import { UserLayout } from "./layouts/UserLayout";
 import UserDashboardPage from "./pages/UserDashboard";
 import DrivePage from "./pages/Drive";
 import FolderViewPage from "./pages/FolderView";
+import SubscriptionPage from "./pages/Subscription";
 
 const queryClient = new QueryClient();
 
