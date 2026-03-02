@@ -101,13 +101,16 @@ export default function FolderViewPage() {
   const handleDownload = async (file: FileItem) => {
     try {
       const token = localStorage.getItem(ACCESS_TOKEN_KEY);
+
       const response = await fetch(
         `${API_BASE_URL}/files/${file.id}/download`,
         {
-          headers: { Authorization: `Bearer ${token}` },
+          headers: { Authorization: `${token}` },
         },
       );
-      if (!response.ok) throw new Error("Download failed");
+
+      if (!response.ok) throw new Error("Download failed!");
+
       const blob = await response.blob();
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");

@@ -15,7 +15,7 @@ export const baseApi = createApi({
       const token = isAdmin
         ? localStorage.getItem(ADMIN_TOKEN_KEY)
         : localStorage.getItem(ACCESS_TOKEN_KEY);
-      if (token) headers.set("Authorization", `Bearer ${token}`);
+      if (token) headers.set("Authorization", `${token}`);
       return headers;
     },
   }),
