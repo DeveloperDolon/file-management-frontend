@@ -8,6 +8,7 @@ import { Toaster } from "./components/ui/toaster";
 import RegisterPage from "./pages/Register";
 import LoginPage from "./pages/Login";
 import ForgotPasswordPage from "./pages/ForgotPassword";
+import ResetPasswordPage from "./pages/ResetPassword";
 
 
 const queryClient = new QueryClient();
