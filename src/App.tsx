@@ -10,12 +10,14 @@ import LoginPage from "./pages/Login";
 import ForgotPasswordPage from "./pages/ForgotPassword";
 import ResetPasswordPage from "./pages/ResetPassword";
 import AdminLoginPage from "./pages/AdminLogin";
-import { UserGuard } from "./components/shared/AuthGuard";
+import { AdminGuard, UserGuard } from "./components/shared/AuthGuard";
 import { UserLayout } from "./layouts/UserLayout";
 import UserDashboardPage from "./pages/UserDashboard";
 import DrivePage from "./pages/Drive";
 import FolderViewPage from "./pages/FolderView";
 import SubscriptionPage from "./pages/Subscription";
+import { AdminLayout } from "./layouts/AdminLayout";
+import AdminDashboardPage from "./pages/AdminDashboard";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +50,22 @@ const App = () => (
               <Route path="/drive/:folderId" element={<FolderViewPage />} />
               <Route path="/subscription" element={<SubscriptionPage />} />
             </Route>
+
+            {/* Admin routes */}
+            <Route
+              element={
+                <AdminGuard>
+                  <AdminLayout />
+                </AdminGuard>
+              }
+            >
+              <Route path="/admin/dashboard" element={<AdminDashboardPage />} />
+              <Route path="/admin/packages" element={<AdminPackagesPage />} />
+            </Route>
+
+            {/* Default */}
+            <Route path="/" element={<LoginPage />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
