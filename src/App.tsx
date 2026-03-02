@@ -10,7 +10,8 @@ import LoginPage from "./pages/Login";
 import ForgotPasswordPage from "./pages/ForgotPassword";
 import ResetPasswordPage from "./pages/ResetPassword";
 import AdminLoginPage from "./pages/AdminLogin";
-
+import { UserGuard } from "./components/shared/AuthGuard";
+import { UserLayout } from "./layouts/UserLayout";
 
 const queryClient = new QueryClient();
 
@@ -25,10 +26,24 @@ const App = () => (
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-            <Route path="/reset-password/:token" element={<ResetPasswordPage />} />
+            <Route
+              path="/reset-password/:token"
+              element={<ResetPasswordPage />}
+            />
             <Route path="/admin/login" element={<AdminLoginPage />} />
 
-
+            <Route
+              element={
+                <UserGuard>
+                  <UserLayout />
+                </UserGuard>
+              }
+            >
+              <Route path="/dashboard" element={<UserDashboardPage />} />
+              <Route path="/drive" element={<DrivePage />} />
+              <Route path="/drive/:folderId" element={<FolderViewPage />} />
+              <Route path="/subscription" element={<SubscriptionPage />} />
+            </Route>
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
