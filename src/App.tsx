@@ -19,6 +19,7 @@ import SubscriptionPage from "./pages/Subscription";
 import { AdminLayout } from "./layouts/AdminLayout";
 import AdminDashboardPage from "./pages/AdminDashboard";
 import AdminPackagesPage from "./pages/AdminPackages";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
