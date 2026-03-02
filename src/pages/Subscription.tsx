@@ -5,11 +5,11 @@ import {
   useSelectPackageMutation,
 } from "@/store/api/subscriptionApi";
 import { PackagePricingCard } from "@/components/subscription/PackagePricingCard";
-import { SubscriptionHistoryTable } from "@/components/subscription/SubscriptionHistoryTable";
 import { SkeletonCard } from "@/components/shared/SkeletonCard";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
 import { useState } from "react";
+import { SubscriptionHistoryTable } from "@/components/subscription/SubscriptionHistoryTable";
 
 export default function SubscriptionPage() {
   const { data: pkgRes, isLoading: pkgLoading } = useGetPackagesQuery();

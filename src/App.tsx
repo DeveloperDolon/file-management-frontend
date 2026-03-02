@@ -18,6 +18,7 @@ import FolderViewPage from "./pages/FolderView";
 import SubscriptionPage from "./pages/Subscription";
 import { AdminLayout } from "./layouts/AdminLayout";
 import AdminDashboardPage from "./pages/AdminDashboard";
+import AdminPackagesPage from "./pages/AdminPackages";
 
 const queryClient = new QueryClient();
 
