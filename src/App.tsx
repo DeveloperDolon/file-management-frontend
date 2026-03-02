@@ -12,6 +12,9 @@ import ResetPasswordPage from "./pages/ResetPassword";
 import AdminLoginPage from "./pages/AdminLogin";
 import { UserGuard } from "./components/shared/AuthGuard";
 import { UserLayout } from "./layouts/UserLayout";
+import UserDashboardPage from "./pages/UserDashboard";
+import DrivePage from "./pages/Drive";
+import FolderViewPage from "./pages/FolderView";
 
 const queryClient = new QueryClient();
 
