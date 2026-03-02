@@ -5,6 +5,8 @@ import { store } from "./store/store";
 import { TooltipProvider } from "./components/ui/tooltip";
 import { Toaster as Sonner } from "sonner";
 import { Toaster } from "./components/ui/toaster";
+import LoginPage from "./pages/Login";
+import RegisterPage from "./pages/Register";
 
 
 const queryClient = new QueryClient();
