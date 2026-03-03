@@ -31,6 +31,9 @@ const AdminPackagesPage = lazy(() => import("./pages/AdminPackages"));
 // ── Misc ─────────────────────────────────────────────────
 const NotFound = lazy(() => import("./pages/NotFound"));
 
+// -- Home page -----------------------------
+const HomePage = lazy(() => import("./pages/Home"));
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -82,7 +85,7 @@ const App = () => (
               </Route>
 
               {/* ── Default ── */}
-              <Route path="/" element={<LoginPage />} />
+              <Route path="/" element={<HomePage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
