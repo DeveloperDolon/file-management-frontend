@@ -1,4 +1,4 @@
-export const API_BASE_URL = "https://universaltourstravelsbd.com/api/v1";
+export const API_BASE_URL = "https://filemanagement-server.vercel.app/api/v1";
 export const ACCESS_TOKEN_KEY = "accessToken";
 export const ADMIN_TOKEN_KEY = "adminAccessToken";
 
