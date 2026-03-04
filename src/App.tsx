@@ -33,6 +33,8 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 // -- Home page -----------------------------
 const HomePage = lazy(() => import("./pages/Home"));
+const KrazyITQA = lazy(() => import("./pages/KrazyItQA"));
+const ZoomItQA = lazy(() => import("./pages/ZoomItQA"));
 
 const queryClient = new QueryClient();
 
@@ -87,6 +89,8 @@ const App = () => (
               {/* ── Default ── */}
               <Route path="/" element={<HomePage />} />
               <Route path="*" element={<NotFound />} />
+              <Route path="/krazyit-question" element={<KrazyITQA/>} />
+              <Route path="/zoomit-question" element={<ZoomItQA/>} />
             </Routes>
           </Suspense>
         </BrowserRouter>
